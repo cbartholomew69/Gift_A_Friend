@@ -1,3 +1,3 @@
 angular.module('myApp').controller('HomeCtrl', function($scope, $rootScope, Auth){
-    $scope.hello = "Hello My Love"
+    $scope.hello = "WELCOME TO GIFT A FRIEND"
 })
