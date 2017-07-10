@@ -3,7 +3,7 @@ import eventsTemplate from "./events.html";
 
 const eventsComponent = {
     controller: eventsController,
-    template: eventsTemplate
+    template: eventsTemplate 
 };
 
-angular.module("myApp").component("events", eventsComponent);
+angular.module("myApp").component("giftEvents", eventsComponent);
