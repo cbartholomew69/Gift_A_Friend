@@ -1,7 +1,8 @@
-EventController.$inject = ["$stateParams", "eventsService";
+EventController.$inject = ["$stateParams", "eventsService"];
 
 function EventController($stateParams, eventsService) {
     const vm = this;
+      
 
     activate();
 

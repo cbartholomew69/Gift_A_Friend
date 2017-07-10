@@ -1,8 +1,8 @@
 import newEventController from "./new.controller";
-import newEventTemplate from "./newhtml"'
+import newEventTemplate from "./new.html"
 
 const newEventComponent = {
-    controller: newEventContoller,
+    controller: newEventController,
     template: newEventTemplate
 };
 
