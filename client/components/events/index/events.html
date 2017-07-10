@@ -1,0 +1,9 @@
+<h1>Events</h1>
+<div class="btn btn-large" ui-sref="newEvent"> New Event</div>
+<div class="artist-container flex">
+    <div class="event flex" ng-repeat="event in $ctrl.events" ui-sref="event({id: event.id})">
+        <div class="info">
+            <h4>{{event.name}}</h4>
+         </div>
+    </div>
+</div>
