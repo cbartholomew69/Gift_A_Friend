@@ -6,4 +6,4 @@ const eventComponent = {
     template: eventTemplate
 };
 
-angular.module("myApp").component("Event", eventComponent);
+angular.module("myApp").component("giftEvent", eventComponent);

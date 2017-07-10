@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <title>GiftAFriend</title>
     <%= csrf_meta_tags %>
@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body ng-app="myApp" ng-controller="HomeCtrl">
+  <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <nav-bar></nav-bar>

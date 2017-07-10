@@ -1,4 +1,5 @@
-angular.module('myApp').controller('AuthCtrl', function($scope, $rootScope, Auth, $state){
+
+angular.module('myApp').controller('AuthCtrl', ['$scope', '$rootScope', 'Auth', '$state', function($scope, $rootScope, Auth, $state){
     var config ={headers: {'X-HTTP-Method-Override': 'POST'}};
 
     
@@ -19,4 +20,4 @@ angular.module('myApp').controller('AuthCtrl', function($scope, $rootScope, Auth
         },      function(errorResponse){
         });
     }
-})
+}])

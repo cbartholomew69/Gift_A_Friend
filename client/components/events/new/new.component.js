@@ -1,5 +1,5 @@
 import newEventController from "./new.controller";
-import newEventTemplate from "./new.html"
+import newEventTemplate from "./new.html";
 
 const newEventComponent = {
     controller: newEventController,
