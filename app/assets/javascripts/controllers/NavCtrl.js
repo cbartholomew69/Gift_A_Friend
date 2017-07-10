@@ -7,7 +7,7 @@ angular.module('myApp').controller('NavCtrl', function($scope, Auth, $rootScope)
     });
 
     $scope.$on('devise:new-registration', function (e, user){
-        $rootScope.user =user;
+        $rootScope.user = user;
     });
 
     $scope.$on('devise:login', function (e, user){
@@ -15,8 +15,10 @@ angular.module('myApp').controller('NavCtrl', function($scope, Auth, $rootScope)
     });
 
     $scope.$on('devise:logout', function (e, user){
-        alert("You have been logged out.")
-        $rootScope.user = undefined
+       alert("You have been logged out.")
+       $rootScope.user = undefined
+       //$scope.user = {};
+       //$state.go('welcome');
+       //$scope.cler();
     });
-
 })

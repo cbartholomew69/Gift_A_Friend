@@ -1,3 +1,5 @@
+const angular = require("angular");
+
 eventsService.$inject = ["$http"];
 function eventsService($http){
     const service = this;

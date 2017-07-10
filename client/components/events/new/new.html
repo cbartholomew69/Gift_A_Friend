@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>new event</h1>
+  <form ng-submit="$ctrl.saveEvent()">
+    <div class="form-group">
+      <label for="eventName">Event Name</label>
+     <!--I want to add a dropdown to this -->
+      <input ng-model="$ctrl.event.name" type="text" class="form-control" id="eventName" placeholder="Enter event">
+    </div>

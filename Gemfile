@@ -41,6 +41,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# adds the CSRF token to HTTP headers
+gem 'ng-rails-csrf'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
