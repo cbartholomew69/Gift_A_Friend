@@ -2,7 +2,7 @@ NewEventController.$inject = ["$stateParams", "$http", "eventsService", "$state"
 
 function NewEventController($stateParams, $http, eventsService, $state){
     var vm = this;
-    vm.artist = {};
+    vm.event = {};
 
     vm.saveEvent = function() {
         eventsService.saveEvent(vm.event).then((res) => {
