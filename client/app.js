@@ -18,6 +18,10 @@ function router ($stateProvider, $urlRouteProvider) {
         .state("newEvent", {
             url: "/event/new",
             template: "<new-event></new-event>"
+        })
+        .state("editEvent", {
+            url: "/events/:id/edit",
+            template: "<edit-event></edit-event>"
         });
     $urlRouteProvider.otherwise("/");
 
