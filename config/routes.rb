@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     resources :users 
   end
 
-  resources :events
+  resources :events do
+    resources :gifts
+  end
+  
   
   root 'application#index'
 end
