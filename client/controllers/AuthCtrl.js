@@ -1,10 +1,12 @@
 
-angular.module('myApp').controller('AuthCtrl', ['$scope', '$rootScope', 'Auth', '$state', function($scope, $rootScope, Auth, $state){
-    var config ={headers: {'X-HTTP-Method-Override': 'POST'}};
+auth.$inject = ['$rootScope', 'Auth', '$state'];
 
+function auth($rootScope, Auth, $state){
+    var config ={headers: {'X-HTTP-Method-Override': 'POST'}};
+    const vm = this;
     
-    $scope.register = function() {
-        Auth.register($scope.user, config).then(function(user){
+    vm.register = function() {
+        Auth.register(vm.user, config).then(function(user){
             $rootScope.user = user
             alert("Thanks for signing up, " + user.name);
             $state.go('home');
@@ -12,12 +14,30 @@ angular.module('myApp').controller('AuthCtrl', ['$scope', '$rootScope', 'Auth', 
         });
     }; 
 
-    $scope.login = function(){
-        Auth.login($scope.user, config).then(function(user){
+    vm.login = function(){
+        Auth.login(vm.user, config).then(function(user){
             $rootScope.user = user
             alert("Your're all signed in, " + user.name);
             $state.go('home');
         },      function(errorResponse){
         });
     }
-}])
+
+    return vm;
+}
+
+const logInComponent = {
+    controller: auth,
+    template: require('../views/login.html')
+};
+
+
+const registerComponent = {
+    controller: auth,
+    template: require('../views/register.html')
+};
+
+angular.module("myApp").component("giftLogin", logInComponent);
+angular.module("myApp").component("giftRegister", registerComponent);
+
+export default auth;

@@ -31,8 +31,7 @@ function router($stateProvider, $urlRouterProvider) {
         })
         .state('login', {
             url: '/login',
-            template: require('./views/login.html'),
-            controller: 'AuthCtrl',
+            template: "<gift-login></gift-login>",
             onEnter: function (Auth, $state) {
                 console.log("Trying to hit Auth")
                 Auth.currentUser().then(function () {
@@ -42,8 +41,7 @@ function router($stateProvider, $urlRouterProvider) {
         })
         .state('register', {
             url: '/register',
-            template: require('./views/register.html'),
-            controller: 'AuthCtrl',
+            template: "<gift-register></gift-register>",
             onEnter: function (Auth, $state) {
                 console.log("Trying to hit Auth")
                 Auth.currentUser().then(function () {
