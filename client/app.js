@@ -8,17 +8,21 @@ function router($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state("home", {
             url: "/",
-            template: "<gift-events></gift-events>",
+            template: "<home></home>",
             onEnter: function (Auth, $state) {
                 console.log("Hit this state")
             }
         })
+        .state("eventIndex", {
+            url: "/events",
+            template: "<gift-events></gift-events>"
+        })
         .state("event", {
-            url: "/event/:id",
+            url: "/events/:id",
             template: "<gift-event></gift-event>"
         })
         .state("newEvent", {
-            url: "/event/new",
+            url: "/events/new",
             template: "<new-event></new-event>"
         })
         .state("editEvent", {
@@ -38,7 +42,7 @@ function router($stateProvider, $urlRouterProvider) {
         })
         .state('register', {
             url: '/register',
-            templateUrl: require('./views/register.html'),
+            template: require('./views/register.html'),
             controller: 'AuthCtrl',
             onEnter: function (Auth, $state) {
                 console.log("Trying to hit Auth")

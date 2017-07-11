@@ -1,13 +1,13 @@
 class EventsController < ApplicationController
 
     def index
-        @events = Events.all
-        rendor json: @events
+        @events = Event.all
+        render json: @events
     end
 
     def show
         @event = Event.find(params_[:id])
-        rendor json: @event
+        render json: @event
 
     end
 
