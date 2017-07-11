@@ -21,6 +21,9 @@ function router($stateProvider, $urlRouterProvider) {
             url: "/event/new",
             template: "<new-event></new-event>"
         })
+        .state("editEvent", {
+            url: "/events/:id/edit",
+            template: "<edit-event></edit-event>"
         .state('login', {
             url: '/login',
             template: require('./views/login.html'),
