@@ -16,7 +16,9 @@ function eventsService($http){
            return res.date;
         });
     };          
-    
+    service.deleteEvent = function() {
+        return $http.delete("/events").then(res => res.date);        
+        };
     return service;
 }
 

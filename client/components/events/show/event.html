@@ -1,3 +1,9 @@
 <a ui-sref="home"> Go Back </a>
 
 <h1>{{$ctrl.event.name}}</h1>
+
+<ul>
+    <li ng-repeat="gift in $ctrl.gifts">
+        <p>{{gift.item}}</p>
+    </li>
+</ul>
