@@ -20,4 +20,6 @@ function eventsService($http){
     return service;
 }
 
-angular.module("myApp").service("eventsService", eventsService);
+angular
+    .module("myApp")
+    .service("eventsService", eventsService);
