@@ -24,6 +24,7 @@ function router($stateProvider, $urlRouterProvider) {
         .state("editEvent", {
             url: "/events/:id/edit",
             template: "<edit-event></edit-event>"
+        })
         .state('login', {
             url: '/login',
             template: require('./views/login.html'),
@@ -43,9 +44,10 @@ function router($stateProvider, $urlRouterProvider) {
                 console.log("Trying to hit Auth")
                 Auth.currentUser().then(function () {
                     $state.go('home')
-                })
+                });
             }
-        });
+        })
+        
     $urlRouterProvider.otherwise("/");
-
+    
 }
