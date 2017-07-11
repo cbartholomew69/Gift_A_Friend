@@ -32,22 +32,22 @@ function router($stateProvider, $urlRouterProvider) {
         .state('login', {
             url: '/login',
             template: "<gift-login></gift-login>",
-            onEnter: function (Auth, $state) {
+            onEnter: ['Auth', '$state', function (Auth, $state) {
                 console.log("Trying to hit Auth")
                 Auth.currentUser().then(function () {
                     $state.go('home')
                 })
-            }
+            }]
         })
         .state('register', {
             url: '/register',
             template: "<gift-register></gift-register>",
-            onEnter: function (Auth, $state) {
+            onEnter: ['Auth', '$state', function (Auth, $state) {
                 console.log("Trying to hit Auth")
                 Auth.currentUser().then(function () {
                     $state.go('home')
                 });
-            }
+            }]
         })
         
     $urlRouterProvider.otherwise("/");
