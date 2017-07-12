@@ -10,7 +10,9 @@ function eventsService($http){
     service.getEvent = function (id) {
         return $http.get(`/events/${id}`).then(res => res.data);
     };  
-          
+    service.editEvent = function (event) {
+        return $http.put(`/events/${event.id}`).then(res => res.data);
+    }  
     service.saveEvent = function (newEvent) {
         return $http.post("/events", newEvent).then(res => {
            return res.data;
