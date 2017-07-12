@@ -1,0 +1,10 @@
+<h1>Gifts</h1>
+<div class="btn btn-large" ui-sref="newGift"> New Gift</div>
+<div class="btn btn-large" ui-sref="deleteGift"> Delete Gift</div>
+<div class="gift-container flex">
+    <div class="gift flex" ng-repeat="gift in $ctrl.gifts" ui-sref="gifts({id: gift.id})">
+        <div class="info">
+            <h4>{{gift.name}}</h4>
+         </div>
+    </div>
+</div>

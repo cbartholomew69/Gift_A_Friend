@@ -4,21 +4,23 @@ function eventsService($http){
 
     service.getEvents = function(){
         console.log("Get Events");
-        return $http.get("/events").then(res => res.date);
+        return $http.get("/events").then(res => res.data);
     };
 
     service.getEvent = function (id) {
-        return $http.get(`/events/${id}`).then(res => res.date);
+        return $http.get(`/events/${id}`).then(res => res.data);
     };  
           
     service.saveEvent = function (newEvent) {
         return $http.post("/events", newEvent).then(res => {
-           return res.date;
+           return res.data;
         });
     };          
-    service.deleteEvent = function() {
-        return $http.delete("/events").then(res => res.date);        
-        };
+    service.deleteEvent = function(id) {
+        return $http.delete("/events/" + id).then(res => { 
+            return res
+        });        
+    }
     return service;
 }
 

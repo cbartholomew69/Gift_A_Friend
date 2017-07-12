@@ -1,6 +1,8 @@
 <h1>Events</h1>
 <div class="btn btn-large" ui-sref="newEvent"> New Event</div>
-<div class="btn btn-large" ui-sref="deleteEvent"> Delete Event</div>
+<button ui-sref="editEvent({id: $ctrl.event.id})">Update</button>
+<button ng-click="$ctrl.deleteEvent($ctrl.event.id)">Delete</button>
+<!--<div class="btn btn-large" ng-click="$ctrl.deleteEvent($ctrl.event.id)"> Delete Event</div>-->
 <div class="event-container flex">
     <div class="event flex" ng-repeat="event in $ctrl.events" ui-sref="event({id: event.id})">
         <div class="info">
