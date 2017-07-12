@@ -4,20 +4,20 @@ function usersService($http){
 
     service.getUsers = function(){
         console.log("Get Users");
-        return $http.get("/users").then(res => res.date);
+        return $http.get("/users").then(res => res.data);
     };
 
     service.getUser = function (id) {
-        return $http.get(`/users/${id}`).then(res => res.date);
+        return $http.get(`/users/${id}`).then(res => res.data);
     };  
           
     service.saveUser = function (newUser) {
         return $http.post("/users", newUser).then(res => {
-           return res.date;
+           return res.data;
         });
     };          
     service.deleteUser= function() {
-        return $http.delete("/users").then(res => res.date);        
+        return $http.delete("/users").then(res => res.data);        
         };
     return service;
 }

@@ -17,13 +17,13 @@ function eventsService($http){
         });
     };          
     service.deleteEvent = function(id) {
+        //return $http.delete("/gifts").then(res => res.data);
         return $http.delete("/events/" + id).then(res => { 
             return res
         });        
     }
     return service;
 }
-
 angular
     .module("myApp")
     .service("eventsService", eventsService);

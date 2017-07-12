@@ -1,10 +1,6 @@
-<a ui-sref="home"> Go Back </a>
-<%= link_to 'Event', event_path(@event) %>
-<h1>{{$ctrl.event.name}}</h1>
-
-
-<ul>
-    <li ng-repeat="gift in $ctrl.gifts">
-        <p>{{gift.item}}</p>
-    </li>
-</ul>
+<h1>Event List</h1>
+<br>
+<h1>{{$ctrl.artist.name}}</h1>
+ <button ui-sref="editEvent({id: $ctrl.event.id})">Update</button>
+ <button ng-click="$ctrl.deleteEvent($ctrl.event.id)">Delete</button>
+ <button ui-sref="eventIndex"> Go Back </button>

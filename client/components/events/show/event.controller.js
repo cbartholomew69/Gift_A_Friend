@@ -9,6 +9,7 @@ function EventController($stateParams, eventsService) {
   function activate() {
       eventsService.getEvent($stateParams.id).then(res => {
         vm.event = res.event;
+      
       });
     }
 }
