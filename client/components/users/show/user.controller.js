@@ -8,7 +8,8 @@ function UserController($stateParams, usersService) {
 
   function activate() {
       usersService.getUser($stateParams.id).then(res => {
-        vm.user = res.event;
+        vm.user = res.user;
+        vm.events = res.events;
       });
     }
 }

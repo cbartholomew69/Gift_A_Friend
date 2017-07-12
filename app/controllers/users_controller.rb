@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params_[:id])
+        @user = User.find(params[:id])
         rendor json: @user
 
     end

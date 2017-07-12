@@ -6,7 +6,7 @@ class GiftsController < ApplicationController
     end
 
     def show
-        @gift = Gift.find(params_[:id])
+        @gift = Gift.find(params[:id])
         render json: @gift
 
     end
