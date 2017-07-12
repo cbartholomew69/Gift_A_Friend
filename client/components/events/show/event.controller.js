@@ -14,3 +14,8 @@ function EventController($stateParams, eventsService) {
 }
 
 export default EventController;
+
+
+
+
+

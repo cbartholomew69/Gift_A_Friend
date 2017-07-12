@@ -1,23 +1,23 @@
 giftsService.$inject = ["$http"];
 function giftsService($http){
-    const gift = this;
+    const service = this;
 
     service.getGifts = function(){
         console.log("Get Gifts");
-        return $http.get("/gifts").then(res => res.date);
+        return $http.get("/gifts").then(res => res.data);
     };
 
     service.getGift = function (id) {
-        return $http.get(`/gifts/${id}`).then(res => res.date);
+        return $http.get(`/gifts/${id}`).then(res => res.data);
     };  
           
-    service.saveGift = function (newUser) {
-        return $http.post("/gifts", newGift).then(res => {
-           return res.date;
+    service.saveGift = function (newGift, eventId) {
+        return $http.post(`/events/${eventId}/gifts`, newGift).then(res => {
+           return res.data;
         });
     };          
     service.deleteGift = function() {
-        return $http.delete("/gifts").then(res => res.date);        
+        return $http.delete("/gifts").then(res => res.data);        
         };
     return service;
 }

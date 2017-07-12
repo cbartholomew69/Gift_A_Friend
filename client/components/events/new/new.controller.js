@@ -5,9 +5,9 @@ function NewEventController($stateParams, $http, eventsService, $state){
     vm.event = {};
 
     vm.saveEvent = function() {
-        eventsService.saveEvent(vm.event).then((res) => {
+        eventsService.saveEvent({event: vm.event}).then((res) => {
             console.log(res);
-            $state.go("home");
+            $state.go("eventIndex");
         });
     };
 }

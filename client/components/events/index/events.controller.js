@@ -13,3 +13,4 @@ function EventsController(eventsService) {
     }
 }
 export default EventsController;
+
