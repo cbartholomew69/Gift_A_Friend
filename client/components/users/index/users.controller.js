@@ -2,7 +2,7 @@ UsersController.$inject = ["usersService"];
 
 function UsersController(usersService) {
     const vm = this;
-    console.log("Gift users")
+    console.log("All users")
     activate();
 
     function activate(){

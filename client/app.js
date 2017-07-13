@@ -9,7 +9,7 @@ function router($stateProvider, $urlRouterProvider) {
         .state("home", {
             url: "/",
             template: "<home></home>",
-            onEnter: function (Auth, $state) {
+            onEnter: function () {
                 console.log("Hit this state")
             }
         })
@@ -33,9 +33,13 @@ function router($stateProvider, $urlRouterProvider) {
             url: "/events/:event_id/gifts/new",
             template: "<new-gift></new-gift>"
         })
+        .state("editProfile", {
+            url: "/users/profile/edit",
+            template: "<edit-profile></edit-profile>"
+        })
         .state("profile", {
-            url: "/users/:user_id/profile",
-            template: "<new-profile></new-profile>"
+            url: "/users/profile",
+            template: "<profile></profile>"
         })
         // .state("newUser", {
         //     url: "/users/:user_id/users/new,

@@ -8,8 +8,8 @@ function auth($rootScope, Auth, $state){
     vm.register = function() {
         Auth.register(vm.user, config).then(function(user){
             $rootScope.user = user
-            alert("Thanks for signing up, " + user.name);
-            $state.go('home');
+            alert("Thanks for signing up, " + user.username);
+            $state.go('editProfile');
         },     function(errorResponse){
         });
     }; 
@@ -18,7 +18,7 @@ function auth($rootScope, Auth, $state){
         Auth.login(vm.user, config).then(function(user){
             $rootScope.user = user
             alert("Your're all signed in, " + user.name);
-            $state.go('newEvent');
+            $state.go('profile');
         },      function(errorResponse){
         });
     }
