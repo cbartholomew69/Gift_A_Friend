@@ -1,6 +1,18 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!, :except => [:show]
     
+    def profile
+        if user_signed_in?
+            @user = current_user
+            render json: @user
+        else
+            render status: 500,
+                json: {
+                    error: 'no user signed in'
+                }
+        end
+    end
+    
     def index
         @users = Users.all
         rendor json: @users
@@ -29,28 +41,28 @@ class UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
         if @user.update(user_params)
-          render json: {
-            user: @user
-          }
+            render json: {
+                user: @user
+            }
         else
-      render status: 500,
-             json: {
-                 error: @user.errors
-             }
+            render status: 500,
+                json: {
+                     error: @user.errors
+            }  
         end     
     end
     
     def destroy
         @user = User.find(params[:id])
         if @user.destroy
-          render json: [
-            message: 'Successfully deleted event'
-          ]
+            render json: [
+                message: 'Successfully deleted event'
+            ] 
         else
           render status: 500, 
                  json: {
                    error: 'Could not delete Event'
-                 }
+                }
         end        
     end
 

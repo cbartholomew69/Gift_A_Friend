@@ -1,0 +1,6 @@
+<h1>My Profile</h1>
+<br>
+<h1>{{$ctrl.profile.name}}</h1>
+ <button ui-sref="editProfile({id: $ctrl.profile.id})">Edit Profile</button>
+ <button ng-click="$ctrl.deleteProfile($ctrl.profile.id)">Delete</button>
+ <button ui-sref="home"> Go Back </button>
