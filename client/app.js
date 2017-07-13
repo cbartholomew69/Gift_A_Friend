@@ -33,6 +33,10 @@ function router($stateProvider, $urlRouterProvider) {
             url: "/events/:event_id/gifts/new",
             template: "<new-gift></new-gift>"
         })
+        .state("profile", {
+            url: "/users/:user_id/profile",
+            template: "<new-profile></new-profile>"
+        })
         // .state("newUser", {
         //     url: "/users/:user_id/users/new,
         //     template: "<event-user></event-user>"
@@ -53,7 +57,7 @@ function router($stateProvider, $urlRouterProvider) {
             onEnter: ['Auth', '$state', function (Auth, $state) {
                 console.log("Trying to hit Auth")
                 Auth.currentUser().then(function () {
-                    $state.go('home')
+                    $state.go('newEvent')
                 });
             }]
         })

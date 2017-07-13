@@ -18,7 +18,7 @@ function auth($rootScope, Auth, $state){
         Auth.login(vm.user, config).then(function(user){
             $rootScope.user = user
             alert("Your're all signed in, " + user.name);
-            $state.go('home');
+            $state.go('newEvent');
         },      function(errorResponse){
         });
     }

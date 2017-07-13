@@ -1,12 +1,31 @@
 body {
-    background-image: url(http://style.giftcart.com/skin/frontend/default/giftcart/images/gift-wizard-menu-img.gif);
+    background-image: url(http://www.planwallpaper.com/static/images/blurry-lights-background.jpg);
     background-repeat: no-repeat;
-    margin-right: 200px;
+    margin-right: 5px;
+    
 }
-h1, h3 {
+h1 {
    font-family: 'Lemonada', cursive; 
+   font-size: 2.5em; /* 40px/16=2.5em */
    text-align: center; 
+   color: crimson;   
 }
+
+h2 {
+    font-family: 'Lemonada', cursive;
+    text-align: center;
+}
+h3 {
+    font-family: 'Lemonada', cursive;
+    text-align: center;
+    color: crimson;
+
+}
+
+nav navbar-nav {
+    color: black;
+}
+
 .event-container {
     text-align: center;
 }
