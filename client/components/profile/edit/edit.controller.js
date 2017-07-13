@@ -16,7 +16,7 @@ function editProfileController($stateParams, usersService, $state) {
         usersService.updateProfile(vm.profile)
         .then(res => {
             console.log(res);
-            $state.go('users/profile')
+            $state.go('profile')
         })
     }
 }
