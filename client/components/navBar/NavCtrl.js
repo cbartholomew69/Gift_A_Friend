@@ -20,9 +20,7 @@ function NavController(Auth, $rootScope){
     $rootScope.$on('devise:logout', function (e, user){
        alert("You have been logged out.")
        $rootScope.user = undefined
-       //vm.user = {};
-       //$state.go('welcome');
-       //vm.cler();
+    //    $state.go('welcome');
     });
 }
 

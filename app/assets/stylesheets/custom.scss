@@ -1,9 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
+
 body {
-    background-image: url(http://www.planwallpaper.com/static/images/blurry-lights-background.jpg);
-    background-repeat: no-repeat;
-    margin-right: 5px;
-    
+    background-image: url(https://i1.wp.com/s-media-cache-ak0.pinimg.com/originals/08/63/63/086363a4e8fec96a7b6335418be887c7.jpg?resize=1440%2C900&ssl=1);
 }
+
+box {
+    margin-top: 50px;
+}
+.div1 {
+     font-size: 60px;
+     text-align: center;
+     height: 100px;
+     position: relative;
+     top: 50px;
+     width: 100%;
+}
+.div2 {
+    font-family: 'Lemonada', cursive;
+    text-align: left;
+    font-size: 50px;
+    padding-top: 150px;
+}
+.div4 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2.5em; /* 40px/16=2.5em */
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+.nav navbar-nav {
+    color: black;
+}
+p {
+     color: #265687;
+     font-family: "Montserrat Alternates", sans-serif;
+     font-size: 92px;
+     font-weight: 400;
+     letter-spacing: -0.05em;
+     position: relative;
+     text-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+     
+     em {
+          font-style: normal;
+          display: inline-block;
+          
+          &:nth-child(1) {
+               color: #4285F4;
+          }
+
+          &:nth-child(2) {
+               color: #E94D3D;
+          }
+
+          &:nth-child(3) {
+               color:#F7C945;
+          }
+
+          &:nth-child(4) {
+               color: #4285F4;
+          }
+
+          &:nth-child(5) {   
+               color: #34A853;
+          }
+
+          &:nth-child(6) {
+               color: #E94D3D;
+          }
+          
+          &.bounce-me {
+               -webkit-animation: bounce 4s infinite ease-in-out;
+               animation: bounce 4s infinite ease-in-out;
+          }
+     }
+}
+
+@-webkit-keyframes bounce {
+     60% {
+          -webkit-transform: translate(0px, -200px) scale(1.2);
+          opacity: 0.8;
+          text-shadow: 0px 150px 20px rgba(0, 0, 0, 0.8);
+     }
+}
+
+@keyframes bounce {
+     60% {
+          -webkit-transform: translate(0px, -200px) scale(1.2);
+          opacity: 0.8;
+          text-shadow: 0px 150px 20px rgba(0, 0, 0, 0.8);
+     }
+}
+
 h1 {
    font-family: 'Lemonada', cursive; 
    font-size: 2.5em; /* 40px/16=2.5em */
@@ -12,7 +98,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'Lemonada', cursive;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 3.5em; /* 40px/16=2.5em */
     text-align: center;
 }
 h3 {
@@ -20,10 +107,6 @@ h3 {
     text-align: center;
     color: crimson;
 
-}
-
-nav navbar-nav {
-    color: black;
 }
 
 .event-container {
