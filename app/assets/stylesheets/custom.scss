@@ -3,9 +3,22 @@
 body {
     background-image: url(https://i1.wp.com/s-media-cache-ak0.pinimg.com/originals/08/63/63/086363a4e8fec96a7b6335418be887c7.jpg?resize=1440%2C900&ssl=1);
 }
+h1 {
+    font-family: 'Lemonada', cursive; 
+    font-size: 2.5em; /* 40px/16=2.5em */
+    text-align: center; 
+    color: crimson;   
+}
+h2 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 3.5em; /* 40px/16=2.5em */
+    text-align: center;
+}
+h3 {
+    font-family: 'Lemonada', cursive;
+    text-align: center;
+    color: crimson;
 
-box {
-    margin-top: 50px;
 }
 .div1 {
      font-size: 60px;
@@ -16,16 +29,41 @@ box {
      width: 100%;
 }
 .div2 {
-    font-family: 'Lemonada', cursive;
-    text-align: left;
-    font-size: 50px;
-    padding-top: 150px;
+     font-family: 'Lemonada', cursive;
+     text-align: left;
+     margin-right: 300px; 
+     font-size: 50px;
+     padding-top: 150px;
 }
 .div4 {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 2.5em; /* 40px/16=2.5em */
     text-align: center;
     letter-spacing: 0.05em;
+}
+.div6 {
+    text-align: center;
+}
+.div7 {
+    margin-right: 300px;
+    
+}
+.panel-body {
+    height: 500px;
+    width: 900px; 
+}
+// .panel-footer-xlarge {
+//     //display: flex;
+//     justify-content: space-between;    
+// }
+.control-panel {
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
 }
 .nav navbar-nav {
     color: black;
@@ -36,6 +74,7 @@ p {
      font-size: 92px;
      font-weight: 400;
      letter-spacing: -0.05em;
+     text-align: center;
      position: relative;
      text-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
      
@@ -88,30 +127,4 @@ p {
           opacity: 0.8;
           text-shadow: 0px 150px 20px rgba(0, 0, 0, 0.8);
      }
-}
-
-h1 {
-   font-family: 'Lemonada', cursive; 
-   font-size: 2.5em; /* 40px/16=2.5em */
-   text-align: center; 
-   color: crimson;   
-}
-
-h2 {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-size: 3.5em; /* 40px/16=2.5em */
-    text-align: center;
-}
-h3 {
-    font-family: 'Lemonada', cursive;
-    text-align: center;
-    color: crimson;
-
-}
-
-.event-container {
-    text-align: center;
-}
-a {
-    text-align: right;
 }

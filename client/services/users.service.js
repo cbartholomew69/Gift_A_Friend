@@ -18,7 +18,7 @@ function usersService($http){
     };
 
     service.updateUser = function (user) {
-        return $http.put(`/users/${user.id}`, user).then(res => res.data);
+        return $http.patch(`/users/` + user.id, user).then(res => res.data);
     }; 
 
     service.saveUser = function (newUser) {

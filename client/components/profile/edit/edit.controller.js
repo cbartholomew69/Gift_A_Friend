@@ -7,13 +7,14 @@ function editProfileController($stateParams, usersService, $state) {
     function activate() {
         usersService.getProfile($stateParams.id).then(res => {
             console.log(res);
-            vm.profile = res;
+            vm.profile = res.user;
         });
     }
     activate();
 
-    function updateProfile(profile) {
-        usersService.updateProfile(vm.profile)
+    function updateProfile() {
+        console.log(vm.profile)
+        usersService.updateUser(vm.profile)
         .then(res => {
             console.log(res);
             $state.go('profile')

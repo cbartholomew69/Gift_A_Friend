@@ -41,10 +41,6 @@ function router($stateProvider, $urlRouterProvider) {
             url: "/users/profile",
             template: "<profile></profile>"
         })
-        // .state("newUser", {
-        //     url: "/users/:user_id/users/new,
-        //     template: "<event-user></event-user>"
-        // })
         .state('login', {
             url: '/login',
             template: "<gift-login></gift-login>",

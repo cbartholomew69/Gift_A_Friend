@@ -3,8 +3,12 @@ class UsersController < ApplicationController
     
     def profile
         if user_signed_in?
-            @user = current_user
-            render json: @user
+            
+            @user = User.find(current_user.id)
+            puts @user.address
+            render json: {
+                user: @user
+            }
         else
             render status: 500,
                 json: {
@@ -14,13 +18,13 @@ class UsersController < ApplicationController
     end
     
     def index
-        @users = Users.all
-        rendor json: @users
+        @users = User.all
+        render json: @users
     end
 
     def show
         @user = User.find(params[:id])
-        rendor json: @user
+         render json: @user
 
     end
 
@@ -40,7 +44,9 @@ class UsersController < ApplicationController
 
     def update
         @user = User.find(params[:id])
-        if @user.update(user_params)
+        @user.update!(user_params)
+        if @user.save
+            puts @user.address
             render json: {
                 user: @user
             }
@@ -69,6 +75,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username)
+        params.require(:user).permit(:id, :username, :first_name, :last_name, :city, :address, :gender)
     end
 end

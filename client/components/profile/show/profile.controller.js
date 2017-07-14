@@ -12,7 +12,7 @@ function ProfileController(Auth, $rootScope, $state, usersService, $stateParams)
         usersService.getProfile()
         .then(res => {
           console.log(res);
-          vm.profile = res;
+          vm.profile = res.user;
         })
         .catch(res => {
             $state.go('home');
