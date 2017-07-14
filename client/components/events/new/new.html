@@ -1,25 +1,30 @@
-<div class="container">
-  <h1>New List</h1>
- 
 
+
+<div class="container"> 
+<br>
+ <br>  
 <form>
-  Select an Event:
+  <br>
+  <div class="box">
+    Select an Event:
   <select ng-model="myVar">
     <option value="">
     <option value="birthday">Birthday
     <option value="anniversary">anniversary
   </select>
+  </div>
 </form>
 <div ng-switch="myVar">
   <div ng-switch-when="birthday">
-     <h1>Birthday</h1>
-     <p>Welcome to my birthday page.</p>
+     <!--<h1>Birthday</h1>-->
+     <p>Welcome to my birthday page</p>
   </div>
   <div ng-switch-when="anniversary">
-     <h1>Anniversary</h1>
-     <p>Welcom to my Anniversary page.</p>
+     <!--<h1>Anniversary</h1>-->
+     <p>Welcome to my Anniversary page</p>
   </div>
 </div>
+  <br>
  <form ng-submit="$ctrl.saveEvent()">
     <div class="form-group">
       <label for="eventName">Gift link</label>
@@ -29,3 +34,5 @@
      </div>
   </form>
 </div>
+
+

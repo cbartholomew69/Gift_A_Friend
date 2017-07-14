@@ -1,6 +1,12 @@
-<h1>My Profile</h1>
+<div class="div4">
+  <h1><strong> My Profile</strong></h1>
+</div>
+<form ng-submit="$ctrl.updateProfile()">
+    <div class="div3">
+      <button ui-sref="editProfile({id: $ctrl.profile.id})">Edit Profile</button>
+      <button ng-click="$ctrl.deleteProfile($ctrl.profile.id)">Delete</button>
+      <button ui-sref="home"> Go Back </button>
+    </div>
+</form>
 <br>
-<h1>{{$ctrl.profile.name}}</h1>
- <button ui-sref="editProfile({id: $ctrl.profile.id})">Edit Profile</button>
- <button ng-click="$ctrl.deleteProfile($ctrl.profile.id)">Delete</button>
- <button ui-sref="home"> Go Back </button>
+<h1>{{$ctrl.profile.username}}</h1>
