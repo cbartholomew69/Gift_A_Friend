@@ -1,24 +1,48 @@
-# README
+# [Gift A Friend](https://github.com/cbartholomew69/Gift_A_Friend)
+  
+  https://hidden-meadow-51864.herokuapp.com/#/
+  
+  https://trello.com/b/1TznMUYj/wdi-project-4
+  
+ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Gift A Friend 
 
-Things you may want to cover:
+ Ever wonder what to get your loved one for their birthday or other special occasion?
+ This app allows your friends to create and save lists so you can reference easily and take the guess work out of wondering     what their perfect gift is. 
+___
 
-* Ruby version
+# Developed By:octocat:
+[Christy Bartholomew](https://github.com/cbartholomew69),
 
-* System dependencies
+___
 
-* Configuration
+# Technologies Used In This Project:
 
-* Database creation
+* Angular
 
-* Database initialization
+* Rails
 
-* How to run the test suite
+* Postgresql/Active Record
 
-* Services (job queues, cache servers, search engines, etc.)
+* Bootstrap
 
-* Deployment instructions
+* HTML, CSS, SASS
 
-* ...
+* Devise for Authentication
+
+* Trello for tracking user stories
+
+# Deliverables
+
+User can sign up/log in with email address
+
+Fill out a profile that shows their profile
+
+Notification messages that posts were successfully created
+
+CRUD functionality on 2 models (Users and Events)
+
+Validations that prevent users from submitting invalid data 
+
+Authorization to ensure users can only modify/delete their own content
