@@ -4,6 +4,8 @@
   
   https://trello.com/b/1TznMUYj/wdi-project-4
   
+  https://user-images.githubusercontent.com/26726476/28239462-c3513862-693a-11e7-8408-e4cc1d3f6299.png
+  
  
 
 # Gift A Friend 
@@ -13,9 +15,15 @@
 ___
 
 # Developed By:octocat:
-[Christy Bartholomew](https://github.com/cbartholomew69),
+[Christy Bartholomew](https://github.com/cbartholomew69)
 
 ___
+
+#Screenshot & Wireframe:
+
+![alt text](https://user-images.githubusercontent.com/26726476/28239462-c3513862-693a-11e7-8408-e4cc1d3f6299.png)
+
+![alt text]()
 
 # Technologies Used In This Project:
 
