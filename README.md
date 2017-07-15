@@ -19,11 +19,11 @@ ___
 
 ___
 
-#Screenshot & Wireframe:
+# Screenshot & Wireframe:
 
 ![alt text](https://user-images.githubusercontent.com/26726476/28239462-c3513862-693a-11e7-8408-e4cc1d3f6299.png)
 
-![alt text]()
+![alt text](https://user-images.githubusercontent.com/26726476/28239563-12c34802-693d-11e7-8e82-ba2aeaee9394.JPG)
 
 # Technologies Used In This Project:
 
@@ -54,3 +54,6 @@ CRUD functionality on 2 models (Users and Events)
 Validations that prevent users from submitting invalid data 
 
 Authorization to ensure users can only modify/delete their own content
+
+# Credit:
+Steve Robertson off Codepen for bouncing text.
