@@ -20,6 +20,7 @@ function editProfileController($stateParams, usersService, $state) {
             $state.go('profile')
         })
     }
+    
 }
 
 angular
